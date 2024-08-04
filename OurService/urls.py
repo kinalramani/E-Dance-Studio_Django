@@ -1,19 +1,17 @@
+# services/urls.py
 from django.urls import path
 from .views import (
     create_service,
     get_all_services,
-    get_service_by_id,
+    get_service,
     update_service,
     delete_service,
-    
 )
 
-
-
 urlpatterns = [
-    path('services/',create_service),
-    path('services/',get_all_services),
-    path('services/<uuid:pk>/',get_service_by_id),
-    path('services/<uuid:pk>/',update_service),
-    path('services/<uuid:pk>/',delete_service),
+    path("create/", create_service),
+    path("services/", get_all_services),
+    path("service/", get_service),
+    path("update-service/", update_service),
+    path("delete-service/", delete_service),
 ]
